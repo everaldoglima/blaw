@@ -10,13 +10,13 @@ def blaw(data):
     @Author: Everaldo Lima
     """
     law = []
-    digits = list(map(lambda n: str(n)[0], data))
+    digits = list(map(lambda d: str(d)[0], data))
     frequencies = collections.Counter(digits)
 
-    for n in range(1, 10):
-        frequency = frequencies[str(n)]
-        percent = (frequency / len(data))
-        vlaw = (LAW_PERCENT[n] == percent)
-        law.append({'n': n, '%': (percent*100), 'valid': vlaw})
+    for d in range(1, 10):
+        frequency = frequencies[str(d)]
+        percent = (frequency / len(data))*100
+        vlaw = LAW_PERCENT[d]*100
+        law.append({'d': d, 'p': percent, 'q': frequency,'law': vlaw})
 
     return law
