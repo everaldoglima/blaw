@@ -7,6 +7,7 @@ def blaw(data):
     """
     Implement Benford´s Law
     ref. https://en.wikipedia.org/wiki/Benford%27s_law
+    @Author: Everaldo Lima
     """
     law = []
     digits = list(map(lambda n: str(n)[0], data))
